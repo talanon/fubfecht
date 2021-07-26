@@ -1,9 +1,22 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <el-container>
+    <el-header>
+      <div id="nav">
+        <router-link to="/">Home</router-link> |
+        <router-link to="/about">About</router-link>
+      </div>
+    </el-header>
+    <el-main>
+      <router-view/>
+    </el-main>
+    <el-footer>
+      <el-row justify="space-around">
+        <el-col :span="6"><div class="grid-content bg-purple">a</div></el-col>
+        <el-col :span="6"><div class="grid-content bg-purple">b</div></el-col>
+        <el-col :span="6"><div class="grid-content bg-purple">c</div></el-col>
+      </el-row>
+    </el-footer>
+  </el-container>
 </template>
 
 <style lang="scss">
